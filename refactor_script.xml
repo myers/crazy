@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename method &apos;net.minecraft.server.Entity.c(...)&apos; to &apos;monkeyshine&apos;&#x0A;- Original project: &apos;CraftBukkit&apos;&#x0A;- Original element: &apos;net.minecraft.server.Entity.c(...)&apos;&#x0A;- Renamed element: &apos;net.minecraft.server.Entity.monkeyshine(...)&apos;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;c&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.method" input="/src\/main\/java&lt;net.minecraft.server{Entity.java[Entity~c~F~F" name="monkeyshine" project="CraftBukkit" references="true" version="1.0"/>
+</session>

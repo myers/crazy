@@ -1,0 +1,605 @@
+CLASS NAME,CLIENT 1.4,CLIENT 1.4_01,SERVER 1.4,SERVER 1.4_01,NEW NAME,BUKKIT NAME,COMMENT
+Achievement,lk,lk,hx,hx,,Achievement
+AchievementList,dp,dp,cn,cn,,AchievementList
+AchievementMap,a,a,b,b,,AchievementMap
+AxisAlignedBB,dq,dq,cm,cm,,AxisAlignedBB,Axis aligned bounding box
+Block,ra,ra,lq,lq,,Block,Base class and manager for block types
+BlockBed,rj,rj,ly,ly,,BlockBed
+BlockBloodStone,uc,uc,nx,ny,BlockNetherrack,BlockBloodStone
+BlockBookshelf,ft,ft,ec,ec,,BlockBookshelf
+BlockBreakable,hv,hv,fn,fn,,BlockBreakable,Base class for glass and ice (not used directly)
+BlockButton,lq,lq,ic,ic,,BlockButton
+BlockCactus,lx,lx,if,if,,BlockCactus
+BlockCake,qt,qt,lo,lo,,BlockCake
+BlockChest,d,d,d,d,,BlockChest
+BlockClay,oo,oo,jz,jz,,BlockClay
+BlockCloth,dg,dg,cf,cf,,BlockCloth
+BlockContainer,om,om,jw,jw,,BlockContainer,Base class for block that can have content (not used directly)
+BlockCrops,ku,ku,hn,hn,,BlockCrops
+BlockDirt,ly,ly,ig,ig,,BlockDirt
+BlockDispenser,tl,tl,nn,no,,BlockDispenser
+BlockDoor,iz,iz,gh,gh,,BlockDoor,Block used for wooden door and iron door
+BlockFence,ia,ia,fs,fs,,BlockFence
+BlockFire,uk,uk,oe,of,,BlockFire
+BlockFlower,sc,sd,ml,mm,,BlockFlower
+BlockFlowing,lt,lt,ie,ie,,BlockFlowing,Block used for flowing water and lava
+BlockFluids,og,og,jr,jr,,BlockFluids,Base class for fluids (not used directly)
+BlockFurnace,po,po,ks,ks,,BlockFurnace
+BlockGlass,ei,ei,db,db,,BlockGlass
+BlockGrass,sn,so,mv,mw,,BlockGrass
+BlockGravel,kp,kp,hk,hk,,BlockGravel
+BlockIce,kv,kv,ho,ho,,BlockIce
+BlockJukeBox,el,el,df,df,,BlockJukeBox
+BlockLadder,cu,cu,bx,bx,,BlockLadder
+BlockLeaves,aw,aw,am,am,,BlockLeaves
+BlockLeavesBase,lb,lb,hr,hr,,BlockLeavesBase,Base class for leaves (not used directly). It seems to be separated out possibly as a base class for objects that change textures based on graphics settings (fancy/fast).
+BlockLever,tm,tm,no,np,,BlockLever
+BlockLightStone,jr,jr,gw,gw,BlockGlowStone,BlockLightStone
+BlockLockedChest,iq,iq,ga,ga,,BlockLockedChest
+BlockLog,rl,rl,lz,lz,,BlockLog
+BlockMinecartTrack,mg,mg,ij,ij,BlockRail,BlockMinecartTrack
+BlockMobSpawner,ci,ci,bp,bp,,BlockMobSpawner
+BlockMushroom,pw,pw,kx,kx,,BlockMushroom
+BlockNote,mt,mt,iq,iq,,BlockNote
+BlockObsidian,dz,dz,cv,cv,,BlockObsidian
+BlockOre,kk,kk,hg,hg,,BlockOre,"Block used for gold, iron, diamond and coal"
+BlockOreBlock,h,h,h,h,,BlockOreBlock,"Block used for gold, diamond and iron blocks"
+BlockPortal,ac,ac,x,x,,BlockPortal
+BlockPressurePlate,bd,bd,at,at,,BlockPressurePlate
+BlockPumpkin,ea,ea,cu,cu,,BlockPumpkin
+BlockRedstoneOre,ba,ba,aq,aq,,BlockRedstoneOre
+BlockRedstoneRepeater,sm,sn,mu,mv,,BlockDiode
+BlockRedstoneTorch,cg,cg,bo,bo,,BlockRedstoneTorch
+BlockRedstoneWire,pa,pa,ki,ki,,BlockRedstoneWire
+BlockReed,oa,oa,jm,jm,,BlockReed
+BlockSand,ff,ff,dt,dt,,BlockSand
+BlockSandStone,nw,nw,jk,jk,,BlockSandStone
+BlockSapling,fv,fv,ee,ee,,BlockSapling
+BlockSign,qr,qr,lm,lm,,BlockSign,Block used for standing signs and wall signs
+BlockSlowSand,ll,ll,hz,hz,BlockSoulSand,BlockSlowSand
+BlockSnow,hw,hw,fo,fo,,BlockSnow
+BlockSnowBlock,w,w,o,n,,BlockSnowBlock
+BlockSoil,rn,ro,mc,md,BlockFarmland,BlockSoil
+BlockSponge,tc,tc,ng,nh,,BlockSponge
+BlockStairs,pg,pg,kn,kn,,BlockStairs
+BlockStationary,li,li,hw,hw,,BlockStationary,Block used for stationary water and lava
+BlockStep,um,um,oh,oi,,BlockStep,Block used for half step and double step
+BlockStone,do,do,ck,ck,,BlockStone
+BlockTNT,aa,aa,r,r,,BlockTNT
+BlockTorch,ro,rp,md,me,,BlockTorch
+BlockWorkbench,eg,eg,da,da,,BlockWorkbench
+CanvasCrashReport,st,su
+CanvasIsomPreview,ap,ap,,,,,Canvas used for drawing the isometric preview
+CanvasMajongLogo,ev,ev,,,CanvasMojangLogo
+CanvasMinecraftApplet,n,n
+ChatLine,pj,pj
+Chunk,jg,jg,gn,gn,,Chunk,Chunk of blocks in the world (16x16x128 blocks)
+ChunkBlockMap,,rn,,mc
+ChunkCache,dv,dv,cr,cr,,ChunkCache,Caches a bunch of chunks of the world
+ChunkCoordinates,ay,ay,ao,ao,,ChunkCoordinates
+ChunkCoordIntPair,uq,uq,ok,ol,,ChunkCoordIntPair,"Pair of integers used as index of chunk (x,z)."
+ChunkFilePattern,oj,oj,js,js,,ChunkFilenameFilter
+ChunkFolderPattern,br,br,bd,bd,,ChunkFileFilter
+ChunkLoader,pz,pz,kz,kz,,ChunkLoader,Implementation of chunk loader
+ChunkPosition,sg,sh,mo,mp,,ChunkPosition
+ChunkProviderClient,rb,rb,,,,,Chunk provider which loads chunks from the server
+ChunkProviderGenerate,tz,tz,nv,nw,,ChunkProviderGenerate,Chunk provider which generates new chunks (used by other chunk providers)
+ChunkProviderHell,nh,nh,iz,iz,,ChunkProviderHell
+ChunkProviderLoadOrGenerate,iu,iu,gb,gb,,ChunkProviderLoadOrGenerate,Chunk provider which either loads chunks or generates them with ChunkProviderGenerate
+ChunkProviderServer,,,gk,gk,,ChunkProviderServer,Chunk provider which manages chunks on the server for all clients
+ClippingHelper,cw,cw
+ClippingHelperImplementation,s,s,,,ClippingHelperImpl
+CodecMus,ha,ha,,,,,Audio codec for .mus files.
+ColorizerFoliage,hn,hn
+ColorizerGrass,gm,gm
+CompressedStreamTools,ah,ah,ac,ac,,CompressedStreamTools,"Provides function to read and write gzipped streams, also used to compress NBT compounds"
+ConsoleCommandHandler,,,kv,kv,,ConsoleCommandHandler
+ConsoleLogFormatter,,,mt,mu,,ConsoleLogFormatter
+ConsoleLogManager,,,ef,ef,,ConsoleLogManager
+ConvertProgressUpdater,,,bh,bh,,ConvertProgressUpdater
+CraftingInventoryCB,da,da,cb,cb,,Container,General callbacks for overlay crafting. onGUI_Closed and on_CraftMatrixChanged.
+CraftingInventoryChestCB,bl,bl,ay,ay,,ContainerChest
+CraftingInventoryDispenserCB,ow,ow,kf,kf,,ContainerDispenser
+CraftingInventoryFurnaceCB,ax,ax,an,an,,ContainerFurnace
+CraftingInventoryPlayerCB,u,u,m,m,,ContainerPlayer,"Callbacks for the player inventory. (As a side note, methods here are made for a 9 slots matrix, not 4, must be a left over from a previous version before the workbenches)"
+CraftingInventoryWorkbenchCB,hf,hf,fd,fd,,ContainerWorkbench,"Callbacks for the workbench. Drop items on the ground when closed, check for recipies when changed."
+CraftingManager,ga,ga,ei,ei,,CraftingManager,Allotment of recipes
+DataWatcher,ql,ql,lh,lh,,DataWatcher
+EffectRenderer,cs,cs
+Empty1,fn,fn,dy,dy,,EmptyClass1
+Empty2,go,go,es,es,,EmptyClass2
+EmptyChunk,jd,jd,gl,gl,,EmptyChunk,Extends Chunk
+Entity,pb,pb,kj,kj,,Entity,"Base class and manager for entities (everything that moves freely, like mobs, players, animals, ...)"
+EntityAnimals,as,as,aj,aj,,EntityAnimal,Base class for animals
+EntityArrow,oz,oz,kh,kh,,EntityArrow,Entity Arrow
+EntityBoat,ew,ew,dn,dn,,EntityBoat,Boat
+EntityBubbleFX,bw,bw,,,,,Effect for bubbles
+EntityChicken,sr,ss,na,nb,,EntityChicken,Animal chicken
+EntityClientPlayerMP,pv,pv,,,,,Player entity for multiplayer mode (the player who is actually playing on that client)
+EntityCow,bf,bf,au,au,,EntityCow,Animal cow
+EntityCreature,gv,gv,ey,ey,,EntityCreature,Base class for creatures (animals and mobs)
+EntityCreeper,ex,ex,do,do,,EntityCreeper,Mob creeper
+EntityDiggingFX,ng,ng,,,,,Effect for digging and breaking blocks
+EntityEgg,rw,rx,mi,mj,,EntityEgg
+EntityExplodeFX,fq,fq,,,,,Effect for explosion
+EntityFallingSand,hy,hy,fq,fq,,EntityFallingSand,Sand falling from gravity
+EntityFireball,bn,bn,ba,ba,,EntityFireball,Ghast fireball
+EntityFish,jq,jq,gv,gv,,EntityFish
+EntityFlameFX,nn,nn,,,,,Effect for flame
+EntityFlying,so,sp,mw,mx,,EntityFlying,EntityFlying
+EntityFX,tr,tr,,,,,Base class for effects
+EntityGhast,az,az,ap,ap,,EntityGhast,EntityGhast
+EntityHeartFX,if,if
+EntityItem,gb,gb,ej,ej,,EntityItem,Item (used for almost anything that can be dropped and collected)
+EntityLavaFX,ee,ee,,,,,Effect for lava
+EntityList,hj,hj,fh,fh,,EntityTypes
+EntityLiving,jm,jm,gq,gq,,EntityLiving,"Base class for living beings (animals, mobs, players)"
+EntityMinecart,ug,ug,oc,od,,EntityMinecart,Entity minecart
+EntityMobs,fr,fr,ea,ea,,EntityMonster,Base class for mobs
+EntityNoteFX,x,x
+EntityOtherPlayerMP,tu,tu,,,,,Player entity for multiplayer mode (other players who are on the same server)
+EntityPainting,no,no,jd,jd,,EntityPainting,Entity Painting
+EntityPickupFX,dm,dm,,,,,Effect for picking up items
+EntityPig,sh,si,mp,mq,,EntityPig,Animal pig
+EntityPigZombie,tv,tv,nt,nu,,EntityPigZombie,EntityZombiePigman
+EntityPlayer,fm,fm,dx,dx,,EntityHuman,Base class for player entity types
+EntityPlayerMP,,,cy,cy,,EntityPlayer,Player entity for multiplayer mode (server class for all players)
+EntityPlayerSP,ch,ch,,,,,Player entity for single player mode
+EntityPortalFX,lw,lw
+EntityRainFX,tb,tb,,,,,Effect for raindrops on the ground
+EntityReddustFX,gy,gy,,,,,Effect for redstone
+EntityRenderer,mw,mw
+EntitySheep,cq,cq,bu,bu,,EntitySheep,Animal sheep
+EntitySkeleton,eo,eo,dh,dh,,EntitySkeleton,Mob skeleton
+EntitySlime,rc,rc,lr,lr,,EntitySlime,Mob slime
+EntitySlimeFX,mf,mf,,,,,Effect for slime and snowballpoof
+EntitySmokeFX,ti,ti,,,,,Effect for smoke and large smoke
+EntitySnowball,bg,bg,av,av,,EntitySnowball,Snowball
+EntitySorter,hu,hu
+EntitySpider,bt,bt,be,be,,EntitySpider,Mob spider
+EntitySplashFX,pk,pk,,,,,Effect for splash
+EntitySquid,to,to,nq,nr,,EntitySquid,Those silly water-dwelling creatures
+EntityTNTPrimed,np,np,je,je,,EntityTNTPrimed,Entity Primed TNT
+EntityTracker,,,mb,mb,,EntityTracker
+EntityTrackerEntry,,,eo,eo,,EntityTrackerEntry
+EntityWaterMob,ag,ag,aa,aa,,EntityWaterAnimal
+EntityWolf,fd,fd,ds,ds,,EntityWolf
+EntityZombie,re,re,lt,lt,,EntityZombie,Mob zombie
+EntityZombieSimple,lf,lf,ht,ht,EntityGiantZombie,EntityGiantZombie,Mob Zombie (Simple)
+EnumArt,hc,hc,fa,fa,,EnumArt,enum of art types
+EnumCreatureType,je,je,gm,gm,,EnumCreatureType
+EnumMobType,ok,ok,ju,ju,,EnumMobType,"enum with everything, mobs and player"
+EnumMovingObjectType,hm,hm,fj,fj,,EnumMovingObjectType
+EnumOptions,gi,gi
+EnumOptionsMappingHelper,en,en
+EnumOS1,ht,ht,,,,,enum with operating system types
+EnumOS2,mh,mh,,,,,enum with operating system types
+EnumOSMappingHelper,ip,ip
+EnumSkyBlock,de,de,cd,cd,,EnumSkyBlock,enum with sky and block
+EnumStatus,cb,cb,bm,bm,,EnumBedError
+EnumToolMaterial,bc,bc,as,as,,EnumToolMaterial
+Explosion,nq,nq,jf,jf,,Explosion
+FileMatcher,dc,dc,cc,cc,,ChunkFile
+FontAllowedCharacters,em,em,dg,dg,ChatAllowedCharacters,FontAllowedCharacters,Reader for the font.txt file which defines legal characters for chat
+FontRenderer,ox,ox
+Frustrum,pf,pf
+FurnaceRecipes,dx,dx,cs,cs,,FurnaceRecipes
+GameSettings,is,is
+GameWindowListener,io,io
+GLAllocation,ez,ez,,,,,Used to allocate gl lists and textures
+Gui,qj,qj,,,,,Base class for all gui screens and overlays
+GuiAchievement,rp,rq
+GuiButton,ih,ih,,,,,Normal size button
+GuiChat,ey,ey
+GuiChest,ge,ge
+GuiConflictWarning,nc,nc
+GuiConnectFailed,dw,dw
+GuiConnecting,ry,rz
+GuiContainer,gp,gp,,,,,"All gui screen for containers like inventory, chest, ..."
+GuiControls,qw,qw
+GuiCrafting,lu,lu
+GuiCreateWorld,eh,eh
+GuiDisableButton,of,of,,,GuiTextBox
+GuiDispenser,fl,fl
+GuiDownloadTerrain,fb,fb
+GuiEditSign,tx,tx
+GuiFurnace,mb,mb
+GuiGameOver,bp,bp
+GuiIngame,qv,qv,,,,,All overlays of the game while playing
+GuiIngameMenu,md,md
+GuiInventory,qm,qm
+GuiLockedChest,sv
+GuiLogFormatter,,,er,er,,GuiLogFormatter
+GuiLogOutputHandler,,,by,by,,GuiLogOutputHandler
+GuiMainMenu,ep,ep
+GuiMultiplayer,jk,jk
+GuiOptions,bu,bu
+GuiRenameWorld,hq,hq
+GuiScreen,cf,cf,,,,,Base class for all gui screens
+GuiSelectWorld,oh,oh
+GuiSleepMP,fc,fc
+GuiSlider,rz,sa,,,,,Slider like the ones for volume in options
+GuiSlot,jb,jb
+GuiSmallButton,v,v,,,,,Smaller button
+GuiStatsComponent,,,gd,gd,,GuiStatsComponent
+GuiStatsListener,,,gr,gr,,GuiStatsListener
+GuiTexturePacks,eq,eq
+GuiTexturePackSlot,cj,cj
+GuiUnused,bm,bm,,,,,Seems to be unused
+GuiVideoSettings,kw,kw
+GuiWorldSlot,jy,ka
+GuiYesNo,nm,nm
+HashEntry,sk,sl,ms,mt,EntityHashEntry,EntityListEntry,A linked list element for the hash table
+HashEntry2,,,jb,jb,PlayerHashEntry,PlayerListEntry
+IAnimals,,,s,s,,IAnimal,Interface for animals (empty interface)
+IBlockAccess,tk,tk,nm,nn,,IBlockAccess,Interface with methods to access (read) single blocks in the world or in caches
+ICamera,ui,ui
+IChunkLoader,ar,ar,ai,ai,,IChunkLoader,Interface for chunk loaders
+IChunkProvider,bs,bs,bc,bc,,IChunkProvider,Interface for chunk providers
+ICommandListener,,,ku,ku,,ICommandListener
+ICrafting,df,df,ce,ce,,ICrafting
+IInvBasic,gk,gk,,,,,interface used in InventoryBasic
+IInventory,jp,jp,gu,gu,,IInventory,Interface for all kinds of inventories
+ImageBuffer,ks,ks
+ImageBufferDownload,oi,oi
+IMobs,ec,ec,cx,cx,,IMonster,Interface for mobs (empty interface)
+InventoryBasic,ni,ni,,,,,called by Packet100 window type 0
+InventoryCrafting,ki,ki,he,he,,InventoryCrafting
+InventoryCraftResult,sj,sk,mr,ms,,InventoryCraftResult
+InventoryLargeChest,lp,lp,ib,ib,,InventoryLargeChest
+InventoryPlayer,hh,hh,ff,ff,,InventoryPlayer
+IPlayerFileData,,,eu,eu,,PlayerFileData
+IProgressUpdate,tw,tw,nu,nv,,IProgressUpdate
+IRecipe,cy,cy,ca,ca,,CraftingRecipe
+ISaveFormat,kx,kx,hp,hp,,Convertable
+ISaveHandler,sq,sr,my,mz,,IDataManager
+IsoImageBuffer,nx,nx,,,,,Used in iso-listener and has imagebuffer references
+Item,fg,fg,du,du,,Item,Base class and manager for item types
+ItemArmor,sb,sc,mk,ml,,ItemArmor,Item type used for all kinds of armor
+ItemAxe,pm,pm,kr,kr,,ItemAxe
+ItemBed,jj,jj,gp,gp,,ItemBed
+ItemBlock,bq,bq,bb,bb,,ItemBlock
+ItemBoat,ri,ri,lx,lx,,ItemBoat
+ItemBow,ns,ns,jh,jh,,ItemBow
+ItemBucket,an,an,af,af,,ItemBucket
+ItemCloth,au,au,ak,ak,,ItemCloth
+ItemCoal,on,on,jx,jx,,ItemCoal
+ItemCookie,ne,ne,ix,ix,,ItemCookie
+ItemDoor,gj,gj,ep,ep,,ItemDoor
+ItemDye,im,im,fz,fz,,ItemDye
+ItemEgg,kf,kf,hc,hc,,ItemEgg
+ItemFishingRod,bz,bz,bl,bl,,ItemFishingRod
+ItemFlintAndSteel,ty,ty,nw,nx,,ItemFlintAndSteel
+ItemFood,uo,uo,oi,oj,,ItemFood,Used for all food items and as a base for soup
+ItemHoe,iw,iw,ge,ge,,ItemHoe
+ItemInWorldManager,,,of,og,,ItemInWorldManager
+ItemLog,fj,fj,dv,dv,,ItemLog
+ItemMinecart,od,od,jp,jp,,ItemMinecart
+ItemPainting,uh,uh,od,oe,,ItemPainting
+ItemPickaxe,ak,ak,ad,ad,,ItemPickaxe
+ItemRecord,qc,qc,lc,lc,,ItemRecord
+ItemRedstone,gq,gq,et,et,,ItemRedstone
+ItemReed,jo,jo,gs,gs,,ItemReed
+ItemRenderer,nt,nt
+ItemSaddle,op,op,ka,ka,,ItemSaddle
+ItemSeeds,oc,oc,jo,jo,,ItemSeeds
+ItemSign,rh,rh,lv,lv,,ItemSign
+ItemSlab,dn,dn,cl,cl,,ItemStep
+ItemSnowball,cr,cr,bv,bv,,ItemSnowball
+ItemSoup,bh,bh,aw,aw,,ItemSoup
+ItemSpade,sd,se,mm,mn,,ItemSpade
+ItemStack,hi,hi,fg,fg,,ItemStack,"Deals with inventory item stacks, spawns new stacks etc."
+ItemSword,nb,nb,iv,iv,,ItemSword
+ItemTool,cv,cv,bz,bz,,ItemTool
+IUpdatePlayerListBox,,,ct,ct,,IUpdatePlayerListBox
+IWorldAccess,mo,mo,io,io,,IWorldAccess
+KeyBinding,mz,mz
+LoadingScreenRenderer,kc,kc
+MapGenBase,es,es,dk,dk,,MapGenBase
+MapGenCaves,pe,pe,km,km,,MapGenCaves
+MapGenCavesHell,mm,mm,in,in,,MapGenCavesHell
+Material,jh,jh,go,go,,Material,"Defines material properties for object, like if it can burn, ..."
+MaterialLiquid,ov,ov,ke,ke,,MaterialLiquid
+MaterialLogic,af,af,z,z,,MaterialLogic,"Material for objects with some kind of logik (growers, redstone circuits, ...)"
+MaterialTransparent,jn,jn,gt,gt,,MaterialTransparent
+MathHelper,gz,gz,ez,ez,,MathHelper
+MCHashTable,ib,ib,ft,ft,EntityHash,EntityList
+MCHashTable2,,,dj,dj,PlayerHash,PlayerList
+McRegionChunkLoader,iy,iy,gg,gg,,ChunkRegionLoader
+MetadataChunkBlock,ph,ph,ko,ko,,MetadataChunkBlock,stores if blocks in a chunk are solid (ground) or air
+MinecartTrackLogic,rq,rr,me,mf,RailLogic,MinecartTrackLogic,Logic for minecart tracks (looks like it was inner class to minecarttrack)
+MinecraftAppletImpl,m,m
+MinecraftError,ts,ts
+MinecraftException,qz,qz,lp,lp,,MinecraftException
+MinecraftImpl,ij,ij,,,,,Implementation of the abstract class Minecraft
+MobSpawnerBase,ig,ig,fx,fx,BiomeGenBase,BiomeBase,These are biomes not mob spawners (has info on the type of mobs to see in the biome though)
+MobSpawnerDesert,er,er,di,di,BiomeGenDesert,BiomeDesert
+MobSpawnerForest,nu,nu,ji,ji,BiomeGenForest,BiomeForest
+MobSpawnerHell,p,p,k,k,BiomeGenHell,BiomeHell
+MobSpawnerRainforest,ue,ue,oa,ob,BiomeGenRainforest,BiomeRainforest
+MobSpawnerSwamp,pq,pq,kt,kt,BiomeGenSwamp,BiomeSwamp
+MobSpawnerTaiga,e,e,e,e,BiomeGenTaiga,BiomeTaiga
+ModelBase,in,in
+ModelBed,hp,hp,fk,fk,,BedBlockTextures
+ModelBiped,ef,ef
+ModelBoat,dy,dy
+ModelChicken,pp,pp
+ModelCow,fw,fw
+ModelCreeper,gx,gx
+ModelGhast,ji,ji
+ModelMinecart,lc,lc
+ModelPig,di,di
+ModelQuadraped,kz,kz
+ModelRenderer,ms,ms
+ModelSheep1,dd,dd
+ModelSheep2,km,km
+ModelSkeleton,ix,ix
+ModelSlime,la,la
+ModelSpider,or,or
+ModelSquid,sl,sm
+ModelWolf,k,k
+ModelZombie,dk,dk
+MouseFilter,bx,bx
+MouseHelper,sa,sb
+MovementInput,qx,qx
+MovementInputFromOptions,jl,jl
+MovingObjectPosition,rk,rk,lw,lw,,MovingObjectPosition,Looks like its actually a RayTraceHit
+MusInputStream,ld,ld,,,,,Decodes .mus files.
+NBTBase,gu,gu,ex,ex,,NBTBase,Base class of NBT tags
+NBTTagByte,nk,nk,ja,ja,,NBTTagByte
+NBTTagByteArray,gc,gc,ek,ek,,NBTTagByteArray
+NBTTagCompound,lg,lg,hu,hu,,NBTTagCompound
+NBTTagDouble,pl,pl,kq,kq,,NBTTagDouble
+NBTTagEnd,jc,jc,gj,gj,,NBTTagEnd
+NBTTagFloat,l,l,i,i,,NBTTagFloat
+NBTTagInt,mq,mq,ip,ip,,NBTTagInt
+NBTTagList,pd,pd,kk,kk,,NBTTagList
+NBTTagLong,jz,jy,ha,ha,,NBTTagLong
+NBTTagShort,qs,qs,ln,ln,,NBTTagShort
+NBTTagString,sz,sz,ne,nf,,NBTTagString
+NetClientHandler,ko,ko,,,,,Client network handler
+NetHandler,pt,pt,kw,kw,,NetHandler,Base class for network communication handling
+NetLoginHandler,,,dq,dq,,NetLoginHandler,Server login handler (when clients connect)
+NetServerHandler,,,gf,gf,,NetServerHandler,Server network handler (in the game)
+NetworkAcceptThread,,,jy,jy,,NetworkAcceptThread
+NetworkListenThread,,,ci,ci,,NetworkListenThread
+NetworkManager,mj,mj,il,il,,NetworkManager
+NetworkMasterThread,td,td,nh,ni,,NetworkMasterThread
+NetworkReaderThread,tf,tf,nj,nk,,NetworkReaderThread
+NetworkWriterThread,th,th,nk,nl,,NetworkWriterThread
+NextTickListEntry,nr,nr,jg,jg,,NextTickListEntry
+NibbleArray,si,sj,mq,mr,,NibbleArray,Used to store a nibble (4bit) array of data for things like light maps and chunk data.
+NoiseGenerator,ck,ck,bq,bq,,NoiseGenerator,Base class for noise generators
+NoiseGenerator2,bk,bk,az,az,,NoiseGenerator2,Don't have proper name for it yet
+NoiseGeneratorOctaves,qn,qn,li,li,,NoiseGeneratorOctaves,Layers multiple perlin noise
+NoiseGeneratorOctaves2,qo,qo,lj,lj,,NoiseGeneratorOctaves2,Uses NoiseGenerator2 instead of old Perlin noise generator
+NoiseGeneratorPerlin,ae,ae,y,y,,NoiseGeneratorPerlin,Perlin noise generator
+OpenGlCapsChecker,cd,cd,,,,,Check OpenGL capabilities (only checks for occlusion query so far)
+OsMap,qh,qh
+Packet,ik,ik,fy,fy,,Packet,Base class and manager for network packets
+Packet0KeepAlive,js,js,gx,gx,,Packet0KeepAlive
+Packet1Login,lm,lm,hy,hy,,Packet1Login
+Packet2Handshake,kh,kh,hd,hd,,Packet2Handshake
+Packet3Chat,mi,mi,ik,ik,,Packet3Chat
+Packet4UpdateTime,fx,fx,eg,eg,,Packet4UpdateTime
+Packet5PlayerInventory,o,o,j,j,,Packet5EntityEquipment
+Packet6SpawnPosition,nv,nv,jj,jj,,Packet6SpawnPosition
+Packet7,b,b,a,a,Packet7UseEntity,Packet7UseEntity,Use Entity
+Packet8,dt,dt,cp,cp,Packet8UpdateHealth,Packet8UpdateHealth,Update Health
+Packet9,mc,mc,ii,ii,Packet9Respawn,Packet9Respawn,Respawn
+Packet10Flying,gs,gs,ev,ev,,Packet10Flying
+Packet11PlayerPosition,y,y,t,t,,Packet11PlayerPosition
+Packet12PlayerLook,rm,rm,ma,ma,,Packet12PlayerLook
+Packet13PlayerLookMove,du,du,cq,cq,,Packet13PlayerLookMove
+Packet14BlockDig,hz,hz,fr,fr,,Packet14BlockDig
+Packet15Place,fp,fp,dz,dz,,Packet15Place
+Packet16BlockItemSwitch,gd,gd,em,em,,Packet16BlockItemSwitch
+Packet17Sleep,id,id,fv,fv,,Packet17
+Packet18ArmAnimation,ky,ky,hq,hq,Packet18Animation,Packet18ArmAnimation
+Packet19,qd,qd,ld,ld,Packet19EntityAction,Packet19EntityAction,Entity action
+Packet20NamedEntitySpawn,kb,kb,gz,gz,,Packet20NamedEntitySpawn
+Packet21PickupSpawn,kq,kq,hj,hj,,Packet21PickupSpawn
+Packet22Collect,cn,cn,bs,bs,,Packet22Collect
+Packet23VehicleSpawn,pc,pc,kl,kl,,Packet23VehicleSpawn
+Packet24MobSpawn,hr,hr,fl,fl,,Packet24MobSpawn
+Packet25,rv,rw,mh,mi,Packet25EntityPainting,Packet25EntityPainting,Painting
+Packet27,nf,nf,iy,iy,,Packet27
+Packet28,fe,fe,dr,dr,Packet28EntityVelocity,Packet28EntityVelocity,Entity Velocity
+Packet29DestroyEntity,ol,ol,jv,jv,,Packet29DestroyEntity
+Packet30Entity,qp,qp,lk,lk,,Packet30Entity
+Packet31RelEntityMove,pi,pi,kp,kp,,Packet31RelEntityMove
+Packet32EntityLook,oq,oq,kb,kb,,Packet32EntityLook
+Packet33RelEntityMoveLook,my,my,it,it,,Packet33RelEntityMoveLook
+Packet34EntityTeleport,nz,nz,jl,jl,,Packet34EntityTeleport
+Packet38,hl,hl,fi,fi,Packet38EntityStatus,Packet38EntityStatus,Entity Status
+Packet39,le,le,hs,hs,Packet39AttachEntity,Packet39AttachEntity,Attach Entity
+Packet40,rd,rd,ls,ls,Packet40EntityMetadata,Packet40EntityMetadata,Entity metadata
+Packet50PreChunk,ot,ot,kc,kc,,Packet50PreChunk
+Packet51MapChunk,dh,dh,cg,cg,,Packet51MapChunk
+Packet52MultiBlockChange,ss,st,nb,nc,,Packet52MultiBlockChange
+Packet53BlockChange,qg,qg,lg,lg,,Packet53BlockChange
+Packet54,rx,ry,mj,mk,Packet54PlayNoteBlock,Packet54PlayNoteBlock
+Packet60,oe,oe,jq,jq,Packet60Explosion,Packet60Explosion,Explosion
+Packet70,bi,bi,ax,ax,,Packet70Bed
+Packet100,hg,hg,fe,fe,Packet100OpenWindow,Packet100OpenWindow,Open window
+Packet101,kg,kg,hb,hb,Packet101CloseWindow,Packet101CloseWindow,Close window
+Packet102,nl,nl,jc,jc,Packet102WindowClick,Packet102WindowClick,Window click
+Packet103,gf,gf,en,en,Packet103SetSlot,Packet103SetSlot,Set slot
+Packet104,ie,ie,fw,fw,Packet104WindowItems,Packet104WindowItems,Window items
+Packet105,kn,kn,hh,hh,Packet105UpdateProgressbar,Packet105CraftProgressBar,Update progress bar
+Packet106,ls,ls,id,id,Packet106Transaction,Packet106Transaction,Transaction
+Packet130,qq,qq,ll,ll,Packet130UpdateSign,Packet130UpdateSign,Update Sign
+Packet255KickDisconnect,ul,ul,og,oh,,Packet255KickDisconnect
+PacketCounter,lh,lh,hv,hv,,PacketCounter
+PanelCrashReport,bj,bj
+Path,ja,ja,gi,gi,,Path,Maintains a sorted set of path points
+PathEntity,cm,cm,br,br,,PathEntity,Result of the pathfinder processing; used to make an Entity follow a path
+Pathfinder,et,et,dl,dl,,Pathfinder
+PathPoint,c,c,c,c,,PathPoint,A point on a path used for pathfinding
+PlayerController,ln,ln
+PlayerControllerMP,tg,tg
+PlayerControllerSP,lz,lz
+PlayerControllerTest,ml,ml,,,,,Not used in the game
+PlayerInstance,,,w,w,,PlayerInstance,An instance of a connected player
+PlayerListBox,,,g,g,,PlayerListBox
+PlayerManager,,,mz,na,,PlayerManager,Manages a list of all connected players
+PlayerNBTManager,,,dd,dd,,PlayerNBTManager
+PositionTexureVertex,gn,gn,,,PositionTextureVertex
+PropertyManager,,,jt,jt,,PropertyManager
+RecipesArmor,t,t,l,l,,RecipesArmor
+RecipesCrafting,ic,ic,fu,fu,,RecipesCrafting
+RecipesDyes,kr,kr,hl,hl,,RecipesDyes
+RecipesFood,lo,lo,ia,ia,,RecipesFood
+RecipesIngots,qa,qa,la,la,,RecipeIngots
+RecipeSorter,iv,iv,gc,gc,,RecipeSorter
+RecipesTools,fs,fs,eb,eb,,RecipesTools
+RecipesWeapons,ta,ta,nf,ng,,RecipesWeapons
+RedstoneUpdateInfo,tp,tp,nr,ns,,RedstoneUpdateInfo
+RegionFile,nd,nd,iw,iw,,RegionFile
+RegionFileCache,ob,ob,jn,jn,,RegionFileCache
+RegionFileChunkBuffer,gl,gl,eq,eq,,ChunkBuffer
+Render,be,be,,,,,Base class for all renderers
+RenderArrow,jv,jv
+RenderBiped,r,r
+RenderBlocks,ca,ca
+RenderBoat,ed,ed
+RenderChicken,hb,hb
+RenderCow,rf,rf
+RenderCreeper,j,j
+RenderEngine,ho,ho
+RenderEntity,jt,jt
+RenderFallingSand,fh,fh
+RenderFireball,il,il
+RenderFish,mn,mn
+RenderGhast,mr,mr
+RenderGlobal,i,i
+RenderHelper,q,q,,,,,Used by renderers to switch renderstates and also contains some other tool functions
+RenderItem,am,am
+RenderList,pr,pr
+RenderLiving,fo,fo
+RenderManager,ps,ps,,,,,All render classes are assigned to entity types here
+RenderMinecart,pn,pn
+RenderPainting,db,db
+RenderPig,jx,jx
+RenderPlayer,cx,cx
+RenderSheep,tt,tt
+RenderSlime,kd,kd
+RenderSnowball,cl,cl
+RenderSorter,jw,jw,,,,,Used to sort rendering list from the position of the player relative to the object (front-to-back or back-to-front rendering?)
+RenderSpider,up,up
+RenderSquid,ds,ds
+RenderTNTPrimed,lv,lv
+RenderWolf,sf,sg
+RenderZombieSimple,ua,ua,,,RenderGiantZombie
+SaveConverterMcRegion,fy,fy,eh,eh,,WorldLoaderServer
+SaveFormatComparator,rg,rg
+SaveFormatOld,qb,qb,lb,lb,,WorldLoader
+SaveHandler,ek,ek
+SaveHandlerMP,sw,sw
+SaveOldDir,kl,kl,hi,hi,,ServerNBTManager
+ScaledResolution,nj,nj
+ScreenShotHelper,fz,fz
+ServerCommand,,,ab,ab,,ServerCommand,Holds the server command and a reference to the command handler
+ServerConfigurationManager,,,el,el,,ServerConfigurationManager
+ServerGUI,,,lu,lu,,ServerGUI
+ServerGuiCommandListener,,,p,p,,ServerGuiCommandListener
+ServerGuiFocusAdapter,,,q,q,,ServerGuiFocusAdapter
+ServerWindowAdapter,,,n,o,,ServerWindowAdapter
+Session,fk,fk,,,,,Stores username and session id
+ShapedRecipes,he,he,fc,fc,,ShapedRecipes
+ShapelessRecipes,qe,qe,le,le,,ShapelessRecipes
+SignModel,ny,ny
+Slot,fi,fi,dw,dw,,Slot,Inventory slot base class
+SlotArmor,mu,mu,ir,ir,,SlotArmor,Inventory slot used for the 4 equip slots for armor.
+SlotCrafting,un,un,oj,ok,,SlotResult,Inventory slot containing the crafting result.
+SlotFurnace,rs,rt,mf,mg,,SlotResult2
+SoundManager,uj,uj
+SoundPool,gg,gg
+SoundPoolEntry,at,at
+SpawnerAnimals,bv,bv,bf,bf,,SpawnerCreature,"Used to spawn creatures near to players. There are two instances, one which spawns animals and one (of the subclass) that spawns monsters."
+SpawnListEntry,av,av,al,al,,BiomeMeta
+StatBasic,rt,ru,mg,mh,,Statistic
+StatCollector,ct,ct,bw,bw,,StatisticCollector
+StatCrafting,qf,qf,lf,lf,,CraftingStatistic
+StatDistance,ao,ao,ag,ag,,DistanceStatistic
+StatList,hs,hs,fm,fm,,StatisticList
+StatTime,ud,ud,nz,oa,,TimeStatistic
+StepSound,by,by,bk,bk,,StepSound,Sound type when walking on a block type
+StepSoundSand,ab,ab,u,u,,StepSoundSand,client side refers to gravel
+StepSoundStone,ad,ad,v,v,,StepSoundStone,client side refers to glass
+StringTranslate,kt,kt,hm,hm,,StatisticStorage,load language file
+Teleporter,qy,qy
+TerrainTextureManager,qu,qu
+Tessellator,lj,lj,,,,,Draws vertexes
+TextureCompassFX,aj,aj
+TexturedQuad,qk,qk
+TextureFlamesFX,os,os
+TextureFX,ai,ai,,,,,"Base class for texture effects (lava, flames, compass, ...)"
+TextureLavaFlowFX,gr,gr
+TextureLavaFX,bo,bo
+TexturePackBase,f,f
+TexturePackCustom,rr,rs
+TexturePackDefault,me,me
+TexturePackList,gw,gw
+TexturePortalFX,gh,gh
+TextureWatchFX,ir,ir
+TextureWaterFX,ru,rv
+TexureWaterFlowFX,lr,lr
+ThreadCommandReader,,,bi,bi,,ThreadCommandReader,Get input from commandline
+ThreadConnectToServer,sx,sx
+ThreadDownloadImage,pu,pu
+ThreadDownloadImageData,dl,dl
+ThreadDownloadResources,ce,ce
+ThreadLoginVerifier,,,cj,cj,,ThreadLoginVerifier,Verify username/password at the minecraft.net website
+ThreadMonitorConnection,,,ni,nj,,ThreadMonitorConnection
+ThreadRunIsoClient,qi,qi
+ThreadServerApplication,,,bg,bg,,ThreadServerApplication,Main thread of the server application
+ThreadSleepForever,ii,ii,bj,bj,,ThreadSleepForever
+TileEntity,ma,ma,ih,ih,,TileEntity
+TileEntityChest,hx,hx,fp,fp,,TileEntityChest,Implement gh (inventory classe). Class inheritance is stronger than interface implementations for the naming scheme.
+TileEntityDispenser,al,al,ae,ae,,TileEntityDispenser
+TileEntityFurnace,oy,oy,kg,kg,,TileEntityFurnace,Implement gh (inventory classe). Class inheritance is stronger than interface implementations for the naming scheme.
+TileEntityMobSpawner,cc,cc,bn,bn,,TileEntityMobSpawner
+TileEntityMobSpawnerRenderer,z,z
+TileEntityNote,py,py,ky,ky,,TileEntityNote
+TileEntityRenderer,jf,jf
+TileEntitySign,uf,uf,ob,oc,,TileEntitySign
+TileEntitySignRenderer,mp,mp
+TileEntitySpecialRenderer,hk,hk
+Timer,mx,mx,,,,,Used to profile the game for performance stats
+UnexpectedThrowable,ka,jz
+Vec3D,bb,bb,ar,ar,,Vec3D,"A Vector consisting of 3 doubles, with helper functions. Name Vec to avoid clash with java.lang.Vector"
+WatchableObject,ju,ju,gy,gy,,WatchableObject
+World,eb,eb,cw,cw,,World,Manager class for the world (only used directly on the client for singleplayer)
+WorldBlockPositionType,px,px,,,,,Stores block positions and types
+WorldChunkManager,tq,tq,ns,nt,,WorldChunkManager
+WorldChunkManagerHell,fu,fu,ed,ed,,WorldChunkManagerHell
+WorldClient,ke,ke,,,,,World on the client for multiplayer
+WorldGenBigTree,gt,gt,ew,ew,,WorldGenBigTree,Grows big trees
+WorldGenCactus,eu,eu,dm,dm,,WorldGenCactus
+WorldGenClay,kj,kj,hf,hf,,WorldGenClay
+WorldGenDungeons,dr,dr,co,co,,WorldGenDungeons,Generates dungeons
+WorldGenerator,mk,mk,im,im,,WorldGenerator,Base class for world generators
+WorldGenFire,tn,tn,np,nq,,WorldGenFire
+WorldGenFlowers,aq,aq,ah,ah,,WorldGenFlowers,Generates flowers and mushrooms
+WorldGenForest,g,g,f,f,,WorldGenForest
+WorldGenHellLava,na,na,iu,iu,,WorldGenHellLava
+WorldGenLakes,co,co,bt,bt,,WorldGenLakes
+WorldGenLightStone1,fa,fa,dp,dp,WorldGenGlowStone1,WorldGenLightStone1
+WorldGenLightStone2,ou,ou,kd,kd,WorldGenGlowStone2,WorldGenLightStone2
+WorldGenLiquids,tj,tj,nl,nm,,WorldGenLiquids,Generate water and lava
+WorldGenMinable,ej,ej,de,de,,WorldGenMinable,"Generates dirt, gravel, coal ore, iron ore, gold ore, redstone ore and diamond ore in underground"
+WorldGenPumpkin,su,sv,nc,nd,,WorldGenPumpkin
+WorldGenReed,hd,hd,fb,fb,,WorldGenReed
+WorldGenTaiga1,mv,mv,is,is,,WorldGenTaiga1
+WorldGenTaiga2,sp,sq,mx,my,,WorldGenTaiga2
+WorldGenTrees,ub,ub,ny,nz,,WorldGenTrees,Grows normal trees
+WorldInfo,dj,dj,ch,ch,,WorldData
+WorldManager,,,cz,cz,,WorldManager
+WorldProvider,sy,sy,nd,ne,,WorldProvider
+WorldProviderHell,se,sf,mn,mo,,WorldProviderHell
+WorldRenderer,cp,cp
+WorldServer,,,dc,dc,,WorldServer,Server world manager
+XBlah,te,te
+XErrr,it,it
+XGuiUmmm,cz,cz
