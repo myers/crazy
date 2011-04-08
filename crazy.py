@@ -40,6 +40,7 @@ def refactor_xml(b_class, methods):
     tree.write("out.xml")
 
 def eclipse_sig(class_name, old_sig):
+    # http://www.retrologic.com/rg-docs-grammar.html
     # from something like a (Lfg;F)
     # to Entity~a~QEntity;~I
     
@@ -101,12 +102,13 @@ def rename_methods(mname, out):
     return res
 
 def names_for_bukkit_class(bukkit_class):
+    # returns o_name, mcp_name
     classlist = csv.reader(open('mcp1401.csv', 'rb'))
     for row in classlist:
         if len(row) < 7:
             continue
         if row[6] == bukkit_class:
-            return row[4], row[0]
+            return row[3], row[0]
     raise ArgumentError
 
 def b_name_for_obfuscated_class(o_class):
@@ -114,7 +116,7 @@ def b_name_for_obfuscated_class(o_class):
     for row in classlist:
         if len(row) < 7:
             continue
-        if row[4] == o_class:
+        if row[3] == o_class:
             return row[6]
     raise ArgumentError
 
