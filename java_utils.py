@@ -14,7 +14,7 @@ def class_tree(dir):
             class_, superclass = find_parent(os.path.join(root, fn))
             if class_:
                 ret[superclass].append(class_)
-    print ret
+    return ret
                 
 def find_parent(javasource):
     content = open(javasource, 'rb').read()
