@@ -22,9 +22,6 @@ def find_parent(javasource):
     if not match:
         return None, None
     return match.groups()
-        
-    
-
 
 if __name__ == '__main__':
     import sys
