@@ -17,15 +17,10 @@ def crazy():
     ck.load_class_list()
     ck.load_class_tree()
     ck.load_members()
-    ck.prune_methods()
+    ck.prune_members()
     #pprint.pprint(ck.bukkit_lookup['Entity'].__dict__)
     #pprint.pprint(ck.bukkit_lookup['EntityLiving'].__dict__)
     #pprint.pprint(ck.bukkit_lookup['EntitySlime'].__dict__)
-    #ck.load_fields()
-    #ck.prune_fields()
-
-    #def _visitor(clsmodel):
-    #    print clsmodel
 
     rs = RefactorScript(ck.obf_to_bukkit_translator)
     ck.walk_tree(rs.script_for_class)
@@ -46,6 +41,22 @@ class MethodKeeper:
             return self.mcp_classes[mcp_name][searge_name]            
         except KeyError:
             return searge_name
+
+class FieldKeeper:
+    def __init__(self):
+        self.fields = defaultdict(dict)
+        
+        for row in csv.reader(open('fields.csv', 'rb')):
+            if row[0] != "*":
+                continue
+            self.fields[row[3]][row[5]] = row[6]
+
+    def lookup(self, mcp_name, searge_name):
+        try:
+            return self.fields[mcp_name][searge_name]            
+        except KeyError:
+            return searge_name
+
            
 class ClassKeeper:
     def __init__(self, dirname):
@@ -59,6 +70,7 @@ class ClassKeeper:
         self.dirname = dirname
         
         self.mk = MethodKeeper()
+        self.fk = FieldKeeper()
     
     def obf_to_bukkit_translator(self, obf_name):
         return self.obf_lookup.get(obf_name, obf_name)
@@ -126,6 +138,21 @@ class ClassKeeper:
                 searge_name = dest.strip()
                 method_name = self.mk.lookup(clsmodel.mcp_name, searge_name)
                 clsmodel.methods[method_sig] = method_name
+            elif line.startswith('.field_map'):
+                start, rest = line.split(' ', 1)
+                
+                obf_name, end = rest.split('/', 1)
+                
+                try:
+                    clsmodel = self.class_model_for_obf(obf_name)
+                except KeyError:
+                    continue
+                method_sig, dest = end.rsplit(' ', 1)
+                
+                searge_name = dest.strip()
+                method_name = self.fk.lookup(clsmodel.mcp_name, searge_name)
+                clsmodel.fields[method_sig] = method_name
+                
 
                 
     def add(self, clsmodel):
@@ -133,9 +160,9 @@ class ClassKeeper:
         self.obf_lookup[clsmodel.obf_name] = clsmodel.bukkit_name
         self.mcp_lookup[clsmodel.mcp_name] = clsmodel.bukkit_name
 
-    def prune_methods(self):
+    def prune_members(self):
         for classmodel in self.bukkit_lookup.values():
-            classmodel.prune_subclasses_methods()
+            classmodel.prune_subclasses_members()
 
     def walk_tree(self, func, currentclass=None):
         if currentclass is None:
@@ -147,8 +174,9 @@ class ClassKeeper:
                     self.walk_tree(func, clsmodel)
             return
         func(currentclass)
-        for clsmodel in currentclass.subclasses:
-            self.walk_tree(func, clsmodel)
+        if not currentclass.is_interface:
+            for clsmodel in currentclass.subclasses:
+                self.walk_tree(func, clsmodel)
 
 
 class ClassModel:
@@ -167,7 +195,7 @@ class ClassModel:
         # k: obf signature, v: mcp name
         self.methods = {}
         
-        #self.fields = {}
+        self.fields = {}
 
     @property
     def is_interface(self):
@@ -185,19 +213,28 @@ class ClassModel:
 
     def remove_method(self, method_sig):
         if self.methods.has_key(method_sig):
-            print "removing %r %r" % (method_sig, self.methods[method_sig],)
+            #print "removing %r %r" % (method_sig, self.methods[method_sig],)
             self.methods.pop(method_sig)
         self.remove_method_in_subclasses(method_sig)
+    def remove_field(self, field_sig):
+        if self.fields.has_key(field_sig):
+            print "removing %r %r from %s" % (field_sig, self.fields[field_sig], self.bukkit_name,)
+            self.fields.pop(field_sig)
+        self.remove_field_in_subclasses(field_sig)
     
     def remove_method_in_subclasses(self, method_sig):
         for subclass in self.subclasses:
             subclass.remove_method(method_sig)
+    def remove_field_in_subclasses(self, field_sig):
+        for subclass in self.subclasses:
+            subclass.remove_field(field_sig)
 
-    def prune_subclasses_methods(self):
+    def prune_subclasses_members(self):
         for method_sig in self.methods.keys():
             self.remove_method_in_subclasses(method_sig)
+        for field_sig in self.fields.keys():
+            self.remove_field_in_subclasses(field_sig)
             
-
     def implements(self):
         match = re.search(r'implements (.+){', self.java_file())
         if not match:
@@ -217,6 +254,11 @@ class RefactorScript:
         self.obf_to_bukkit_translator = obf_to_bukkit_translator
    
     def script_for_class(self, clsmodel):
+        self.script_for_methods(clsmodel)
+        self.script_for_fields(clsmodel)
+    
+    
+    def script_for_methods(self, clsmodel):
         for old_sig, new_name in clsmodel.methods.items():
             old_method_name = old_sig.split(" ")[0]
             if old_method_name == new_name:
@@ -232,6 +274,25 @@ class RefactorScript:
               name=new_name,
               project="CraftBukkit",
               references="true",
+              version="1.0")
+
+    def script_for_fields(self, clsmodel):
+        for old_sig, new_name in clsmodel.fields.items():
+            assert old_sig != new_name
+            el = ET.SubElement(self.root, "refactoring", 
+              comment="", 
+              delegate="false",
+              deprecate="false",
+              description="Rename field %r to %r" % (old_sig, new_name,),
+              flags="589830",
+              getter="false",
+              id="org.eclipse.jdt.ui.rename.field",
+              input="/src\/main\/java<net.minecraft.server{%s.java[%s^%s" % (clsmodel.bukkit_name, clsmodel.bukkit_name, old_sig,),
+              name=new_name,
+              project="CraftBukkit",
+              references="true",
+              setter="false",
+              textual="false",
               version="1.0")
 
     def write(self, path):        
