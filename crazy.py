@@ -100,7 +100,7 @@ class ClassKeeper:
         for clsmodel in self.bukkit_lookup.values():
             for interface_name in clsmodel.implements():
                 interface_cls_model = self.bukkit_lookup.get(interface_name, None)
-                print "I got %r" % (interface_cls_model,)
+                #print "I got %r" % (interface_cls_model,)
                 if interface_cls_model:
                     interface_cls_model.subclasses.append(clsmodel)
                     
@@ -196,6 +196,7 @@ class ClassModel:
         self.methods = {}
         
         self.fields = {}
+        
 
     @property
     def is_interface(self):
@@ -218,7 +219,7 @@ class ClassModel:
         self.remove_method_in_subclasses(method_sig)
     def remove_field(self, field_sig):
         if self.fields.has_key(field_sig):
-            print "removing %r %r from %s" % (field_sig, self.fields[field_sig], self.bukkit_name,)
+            #print "removing %r %r from %s" % (field_sig, self.fields[field_sig], self.bukkit_name,)
             self.fields.pop(field_sig)
         self.remove_field_in_subclasses(field_sig)
     
@@ -239,7 +240,6 @@ class ClassModel:
         match = re.search(r'implements (.+){', self.java_file())
         if not match:
             return []
-        print match.group(1)
         return [ii.strip() for ii in match.group(1).split(',')]\
         
     def java_file(self):
@@ -277,23 +277,32 @@ class RefactorScript:
               version="1.0")
 
     def script_for_fields(self, clsmodel):
+        #HACK to work around craftbukkit adding vars of the same name
+        if clsmodel.bukkit_name == 'NetServerHandler':
+            self.rename_field(clsmodel, 'lastPosX', 'lastBlockHitPosX')
+            self.rename_field(clsmodel, 'lastPosY', 'lastBlockHitPosY')
+            self.rename_field(clsmodel, 'lastPosZ', 'lastBlockHitPosZ')
+    
         for old_sig, new_name in clsmodel.fields.items():
             assert old_sig != new_name
-            el = ET.SubElement(self.root, "refactoring", 
-              comment="", 
-              delegate="false",
-              deprecate="false",
-              description="Rename field %r to %r" % (old_sig, new_name,),
-              flags="589830",
-              getter="false",
-              id="org.eclipse.jdt.ui.rename.field",
-              input="/src\/main\/java<net.minecraft.server{%s.java[%s^%s" % (clsmodel.bukkit_name, clsmodel.bukkit_name, old_sig,),
-              name=new_name,
-              project="CraftBukkit",
-              references="true",
-              setter="false",
-              textual="false",
-              version="1.0")
+            self.rename_field(clsmodel, old_sig, new_name)
+
+    def rename_field(self, clsmodel, old_sig, new_name):
+        el = ET.SubElement(self.root, "refactoring", 
+          comment="", 
+          delegate="false",
+          deprecate="false",
+          description="Rename field %r to %r" % (old_sig, new_name,),
+          flags="589830",
+          getter="false",
+          id="org.eclipse.jdt.ui.rename.field",
+          input="/src\/main\/java<net.minecraft.server{%s.java[%s^%s" % (clsmodel.bukkit_name, clsmodel.bukkit_name, old_sig,),
+          name=new_name,
+          project="CraftBukkit",
+          references="true",
+          setter="false",
+          textual="false",
+          version="1.0")
 
     def write(self, path):        
         tree = ET.ElementTree(self.root)
